@@ -17,5 +17,9 @@ trait EventMap
         'Illuminate\Auth\Events\Logout' => [
             'Yadahan\AuthenticationLog\Listeners\LogSuccessfulLogout',
         ],
+        
+        'Illuminate\Auth\Events\Attempting' => [
+            'Yadahan\AuthenticationLog\Listeners\LogAuthenticationAttempt',
+        ],
     ];
 }
