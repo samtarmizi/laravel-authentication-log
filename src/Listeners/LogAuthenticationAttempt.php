@@ -2,7 +2,7 @@
 
 namespace Yadahan\AuthenticationLog\Listeners;
 
-use Illuminate\Auth\Events\Login;
+use Illuminate\Auth\Events\Attempting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Yadahan\AuthenticationLog\AuthenticationLog;
@@ -34,7 +34,7 @@ class LogAuthenticationAttempt
      * @param  Login  $event
      * @return void
      */
-    public function handle(Login $event)
+    public function handle(Attempting $event)
     {
         $user = $event->user;
         $ip = $this->request->ip();
