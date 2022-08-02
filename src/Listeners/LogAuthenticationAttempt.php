@@ -4,9 +4,7 @@ namespace Yadahan\AuthenticationLog\Listeners;
 
 use Illuminate\Auth\Events\Attempting;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use Yadahan\AuthenticationLog\AuthenticationLog;
-use Yadahan\AuthenticationLog\Notifications\NewDevice;
 
 class LogAuthenticationAttempt
 {
